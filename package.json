@@ -1,0 +1,141 @@
+{
+  "name": "rescue_registry",
+  "private": true,
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagenet/rescue_registry.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wagenet/rescue_registry/issues"
+  },
+  "homepage": "https://github.com/wagenet/rescue_registry",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "semantic-release-rubygem": "^1.2.0",
+    "semantic-release": "^25.0.8",
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/git": "^11.0.1"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "breakingMarker": "!",
+              "release": "major"
+            },
+            {
+              "breaking": true,
+              "release": "major"
+            },
+            {
+              "revert": true,
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
+            },
+            {
+              "type": "build",
+              "release": false
+            },
+            {
+              "type": "ci",
+              "release": false
+            },
+            {
+              "type": "chore",
+              "release": false
+            },
+            {
+              "type": "docs",
+              "release": false
+            },
+            {
+              "type": "refactor",
+              "release": false
+            },
+            {
+              "type": "style",
+              "release": false
+            },
+            {
+              "type": "test",
+              "release": false
+            }
+          ],
+          "parserOpts": {
+            "headerPattern": "^(\\w*)(?:\\((.*)\\))?(!)?: (.*)$",
+            "headerCorrespondence": [
+              "type",
+              "scope",
+              "breakingMarker",
+              "subject"
+            ],
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES",
+              "BREAKING",
+              "BREAKING CHANGE!",
+              "BREAKING CHANGES!",
+              "BREAKING!"
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "parserOpts": {
+            "headerPattern": "^(\\w*)(?:\\((.*)\\))?(!)?: (.*)$",
+            "headerCorrespondence": [
+              "type",
+              "scope",
+              "breakingMarker",
+              "subject"
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogTitle": "# Changelog",
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "semantic-release-rubygem",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "lib/rescue_registry/version.rb"
+          ],
+          "message": "${nextRelease.version} CHANGELOG [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ],
+    "debug": true,
+    "dryRun": false
+  }
+}

@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "Registry for Rails Exceptions"
   # spec.description = "TODO: Description of RescueRegistry"
   spec.license     = "MIT"
-  spec.required_ruby_version = ">= 2.3"
+  spec.required_ruby_version = ">= 3.2"
 
   spec.metadata = {
     "bug_tracker_uri"   => "https://github.com/wagenet/rescue_registry/issues",
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md", "CHANGELOG.md"]
 
-  spec.add_dependency "activesupport", ">= 5.0"
+  spec.add_dependency "activesupport", ">= 7.1"
 
   spec.add_development_dependency "appraisal", "~> 2.2"
   spec.add_development_dependency "kramdown-parser-gfm", "~> 1.0"
