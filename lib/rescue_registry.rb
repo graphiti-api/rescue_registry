@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'active_support'
+require 'active_support/core_ext/object/blank'
 
 module RescueRegistry
   autoload :ActionDispatch,        "rescue_registry/action_dispatch"
