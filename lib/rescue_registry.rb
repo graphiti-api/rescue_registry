@@ -17,11 +17,11 @@ module RescueRegistry
   class HandlerNotFound < StandardError; end
 
   def self.context
-    Thread.current[:rescue_registry_context]
+    Fiber[:rescue_registry_context]
   end
 
   def self.context=(value)
-    Thread.current[:rescue_registry_context] = value
+    Fiber[:rescue_registry_context] = value
   end
 
   def self.with_context(value)
