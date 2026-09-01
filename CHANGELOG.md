@@ -1,5 +1,17 @@
 # Changelog
 
+# [1.1.0](https://github.com/graphiti-api/rescue_registry/compare/v1.0.0...v1.1.0) (2026-09-01)
+
+
+### Bug Fixes
+
+* store context in fiber storage so it survives into child fibers ([e3558d9](https://github.com/graphiti-api/rescue_registry/commit/e3558d906a81ed19fa4638ee9f2038d29b2085f8))
+
+
+### Features
+
+* update targeted version and supported rubies to match Graphiti 2.0, add semantic-release config ([91fd1aa](https://github.com/graphiti-api/rescue_registry/commit/91fd1aab5ef4e611e4cd7490e4e853a7325ed028))
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
