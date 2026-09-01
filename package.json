@@ -4,13 +4,13 @@
   "version": "0.0.0-development",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wagenet/rescue_registry.git"
+    "url": "git+https://github.com/graphiti-api/rescue_registry.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wagenet/rescue_registry/issues"
+    "url": "https://github.com/graphiti-api/rescue_registry/issues"
   },
-  "homepage": "https://github.com/wagenet/rescue_registry",
+  "homepage": "https://github.com/graphiti-api/rescue_registry",
   "scripts": {
     "semantic-release": "semantic-release"
   },
@@ -22,7 +22,7 @@
   },
   "release": {
     "branches": [
-      "master"
+      "main"
     ],
     "plugins": [
       [
