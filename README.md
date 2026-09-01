@@ -19,9 +19,8 @@ codes in different controllers.
 
 ## In Action
 
-### graphiti-rails
-The [graphiti-rails gem](https://github.com/wagenet/graphiti-rails) uses RescueRegistry to facilitate better JSON:API error handling, since
-Rails' out-of-the-box behavior doesn't adhere to the JSON:API spec.
+### graphiti
+The [graphiti gem](https://github.com/graphiti-api/graphiti) uses RescueRegistry to facilitate better JSON:API error handling, since Rails' out-of-the-box behavior doesn't adhere to the JSON:API spec.
 
 ## Usage
 

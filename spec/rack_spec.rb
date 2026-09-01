@@ -1,4 +1,7 @@
 require_relative "spec_helper"
+require "rack/builder"
+require "rack/common_logger"
+require "rack/show_exceptions"
 require "rack/test"
 require "rescue_registry"
 

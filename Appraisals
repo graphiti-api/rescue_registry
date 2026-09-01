@@ -1,34 +1,23 @@
-appraise "rails-5" do
-  gem "rails", "~> 5.2"
-  gem "rspec-rails", "~> 3.8"
-  gem "sqlite3", "~> 1.3"
+appraise "rails-7-1" do
+  gem "rails", "~> 7.1.0"
+  gem "rspec-rails"
+  gem "sqlite3", "~> 1.4"
 end
 
-appraise "rails-6" do
-  gem "rails", "~> 6.0"
-  gem "rspec-rails", "~> 3.8"
-  gem "sqlite3", "~> 1.4.0"
-  gem "net-smtp" # For Ruby 3.1
+appraise "rails-7-2" do
+  gem "rails", "~> 7.2.0"
+  gem "rspec-rails"
+  gem "sqlite3", ">= 1.4"
 end
 
-appraise "rails-7" do
-  gem "rails", "~> 7.0"
-  gem "rspec-rails", "~> 3.8"
-  gem "sqlite3", "~> 1.4.0"
-end
-
-appraise "rails-edge" do
-  gem "rails", github: "rails/rails"
-  gem "rspec-rails", "~> 3.8"
-  gem "sqlite3", "~> 1.4.0"
+appraise "rails-8-0" do
+  gem "rails", "~> 8.0.0"
+  gem "rspec-rails"
+  gem "sqlite3", ">= 2.1"
 end
 
 appraise "rack" do
   gem "rack"
   gem "rack-test"
   gem "rspec", "~> 3.8"
-  # Allow for older Ruby usage
-  gem "activesupport", "~> 6.0"
-  # For Ruby 3.1
-  gem "net-smtp"
 end
